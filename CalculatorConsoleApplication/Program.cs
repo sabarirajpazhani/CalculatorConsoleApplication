@@ -9,6 +9,7 @@ namespace CalculatorConsoleApplication
             Console.WriteLine("**************** CALCULATOR ****************");
             Console.WriteLine("|                                          |");
             Console.WriteLine("------ Enter the number with Operator ------");
+            
             int result = Convert.ToInt32(Console.ReadLine());
             
             while (true)
@@ -17,7 +18,7 @@ namespace CalculatorConsoleApplication
 
                 if (operators == "=")
                 {
-                    Console.WriteLine("------ Result: " + result + "------");
+                    Console.WriteLine("----------- Result: " + result + "----------");
                     break;
                 }
                 int num = Convert.ToInt32(Console.ReadLine());
@@ -28,7 +29,7 @@ namespace CalculatorConsoleApplication
                         result += num;
                         break;
                     case "-":
-                        result += num;
+                        result -= num;
                         break;
                     case "*":
                         result *= num;
@@ -37,7 +38,7 @@ namespace CalculatorConsoleApplication
                         result/= num;
                         break;
                     case "%":
-                        result *= num;
+                        result %= num;
                         break;
                         
                 }
